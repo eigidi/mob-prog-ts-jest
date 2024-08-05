@@ -15,8 +15,14 @@ class Service {
  * FizzBuzzService.generateFizzBuzz(15); // => 'FizzBuzz'
  * FizzBuzzService.generateFizzBuzz(7); // => 'Not a FB'
  */
-  generateFizzBuzz(a: number): any {
-    return "";
+  generateFizzBuzz(number: number): any {
+    let result = '';
+    if (number % 3 === 0)
+      result += "Fizz";
+    if (number % 5 === 0)
+      result += "Buzz";
+
+    return result || "Not a FB"
   }
 }
 
